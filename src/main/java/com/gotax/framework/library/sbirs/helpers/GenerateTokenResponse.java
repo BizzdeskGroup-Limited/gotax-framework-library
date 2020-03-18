@@ -13,4 +13,5 @@ public class GenerateTokenResponse {
     private boolean success;
     private String sessionId;
     private String tokenId;
+    private String errorMsg;
 }

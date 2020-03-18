@@ -12,12 +12,8 @@ import java.util.Date;
 @Component
 public class GoTaxLogHandler {
 
-    private GoTaxLogChannel goTaxLogChannel;
-
     @Autowired
-    public GoTaxLogHandler(GoTaxLogChannel goTaxLogChannel) {
-        this.goTaxLogChannel = goTaxLogChannel;
-    }
+    private GoTaxLogChannel goTaxLogChannel;
 
     private GoTaxLogHelper generateGoTaxLogsPerRequest(String requestHeaders, String requestBody, String responsePayLoad, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
         return new GoTaxLogHelper()
