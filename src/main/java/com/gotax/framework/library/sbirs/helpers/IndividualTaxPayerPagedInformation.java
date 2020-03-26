@@ -1,5 +1,6 @@
 package com.gotax.framework.library.sbirs.helpers;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @Data
@@ -8,30 +9,56 @@ import lombok.*;
 @EqualsAndHashCode
 @ToString
 public class IndividualTaxPayerPagedInformation {
+
     private String tin;
-    private String title;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String genderName;
-    private String stateOfOrigin;
-    private String dateOfBirth;
-    private Object maritalStatus;
-    private String occupation;
-    private String nationalityName;
-    private String phoneNo1;
-    private String phoneNo2;
-    private String taxpayerPhoto;
-    private String emailAddress;
-    private String dateOfRegistration;
-    private String houseNumber;
-    private String streetName;
+    @JsonProperty("Title")
+    private String Title;
+    @JsonProperty("first_name")
+    private String first_name;
+    @JsonProperty("middle_name")
+    private String middle_name;
+    @JsonProperty("last_name")
+    private String last_name;
+    @JsonProperty("GenderName")
+    private String GenderName;
+    @JsonProperty("StateOfOrigin")
+    private String StateOfOrigin;
+    @JsonProperty("date_of_birth")
+    private String date_of_birth;
+    @JsonProperty("MaritalStatus")
+    private String MaritalStatus;
+    @JsonProperty("Occupation")
+    private String Occupation;
+    @JsonProperty("nationality_name")
+    private String nationality_name;
+    @JsonProperty("phone_no_1")
+    private String phone_no_1;
+    @JsonProperty("phone_no_2")
+    private String phone_no_2;
+    @JsonProperty("taxpayer_photo")
+    private String taxpayer_photo;
+    @JsonProperty("email_address")
+    private String email_address;
+    @JsonProperty("date_of_registration")
+    private String date_of_registration;
+    @JsonProperty("house_number")
+    private String house_number;
+    @JsonProperty("street_name")
+    private String street_name;
     private String city;
-    private String lGAName;
-    private String stateName;
-    private String countryName;
-    private String taxAuthorityCode;
-    private String taxAuthorityName;
-    private Double userId;
-    private String taxpayerStatus;
+    @JsonProperty("LGAName")
+    private String LGAName;
+    @JsonProperty("StateName")
+    private String StateName;
+    @JsonProperty("CountryName")
+    private String CountryName;
+    @JsonProperty("TaxAuthorityCode")
+    private String TaxAuthorityCode;
+    @JsonProperty("TaxAuthorityName")
+    private String TaxAuthorityName;
+    @JsonProperty("user_id")
+    private int user_id;
+    @JsonProperty("TaxpayerStatus")
+    private String TaxpayerStatus;
+
 }

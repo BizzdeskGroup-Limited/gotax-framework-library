@@ -1,5 +1,6 @@
 package com.gotax.framework.library.sbirs.helpers;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.util.List;
@@ -10,11 +11,18 @@ import java.util.List;
 @EqualsAndHashCode
 @ToString
 public class GetIndividualTaxPayersPagedResponse {
-    private List<IndividualTaxPayerPagedInformation> taxpayerList;
-    private String responseCode;
-    private String responseDescription;
-    private Integer totalRecords;
-    private Integer page;
-    private Integer totalPages;
-    private Integer recordPerPage;
+    @JsonProperty("TaxpayerList")
+    private List<IndividualTaxPayerPagedInformation> TaxpayerList;
+    @JsonProperty("ResponseCode")
+    private String ResponseCode;
+    @JsonProperty("ResponseDescription")
+    private String ResponseDescription;
+    @JsonProperty("TotalRecords")
+    private int TotalRecords;
+    @JsonProperty("Page")
+    private int Page;
+    @JsonProperty("TotalPages")
+    private int TotalPages;
+    @JsonProperty("RecordPerPage")
+    private int RecordPerPage;
 }

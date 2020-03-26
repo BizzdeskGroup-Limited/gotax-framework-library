@@ -1,5 +1,6 @@
 package com.gotax.framework.library.sbirs.helpers;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @Data
@@ -8,6 +9,8 @@ import lombok.*;
 @EqualsAndHashCode
 @ToString
 public class AddTaxDetailsResponse {
-    private String responseCode;
-    private String responseDescription;
+    @JsonProperty("ResponseCode")
+    private String ResponseCode;
+    @JsonProperty("ResponseDescription")
+    private String ResponseDescription;
 }
