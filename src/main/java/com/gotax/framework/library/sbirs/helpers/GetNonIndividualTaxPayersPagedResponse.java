@@ -2,6 +2,7 @@ package com.gotax.framework.library.sbirs.helpers;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
+@Accessors(chain = true)
 public class GetNonIndividualTaxPayersPagedResponse {
     @JsonProperty("TaxpayerList")
     private List<NonIndividualTaxPayerPagedInformation> TaxpayerList;
