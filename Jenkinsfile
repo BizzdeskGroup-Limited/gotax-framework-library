@@ -6,5 +6,4 @@ node {
         echo 'Building Jar file...'
         sh 'mvn clean install -DskipTests'
         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-        junit 'target/surefire-reports/*.xml'
 }
